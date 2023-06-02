@@ -1,7 +1,5 @@
 pipeline {
   agent any
-  parameters
-
   stages {
     stage('Build') {
       steps {
@@ -27,7 +25,7 @@ pipeline {
           def imageName = "778168509800.dkr.ecr.ap-southeast-1.amazonaws.com/monolithic"
           def imageTag = "latest"
 
-          
+
           // Tag the Docker image for ECR
           sh "docker tag ${imageName}:${imageTag} 778168509800.dkr.ecr.ap-southeast-1.amazonaws.com/monolithic:${imageTag}"
 
