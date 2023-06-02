@@ -10,8 +10,7 @@ pipeline {
           def imageTag = "latest"
 
           // Build the Docker image
-          //docker.build(imageName + ":" + imageTag)
-          sh "docker build -t 778168509800.dkr.ecr.ap-southeast-1.amazonaws.com/monolithic:latest backend"
+          sh "docker build -t ${imageName}:${imageTag} backend"
 
         }
       }
