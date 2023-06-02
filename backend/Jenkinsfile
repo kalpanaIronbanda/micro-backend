@@ -5,7 +5,7 @@ pipeline {
       steps {
         script {
           // Define your Docker image name and tag
-          def imageName = "778168509800.dkr.ecr.ap-southeast-1.amazonaws.com/monolithic"
+          def imageName = "flask-app"
           def imageTag = "latest"
 
           // Build the Docker image
@@ -22,7 +22,7 @@ pipeline {
           sh "aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 778168509800.dkr.ecr.ap-southeast-1.amazonaws.com"
 
           // Define your Docker image name and tag
-          def imageName = "778168509800.dkr.ecr.ap-southeast-1.amazonaws.com/monolithic"
+          def imageName = "flask-app"
           def imageTag = "latest"
 
 
