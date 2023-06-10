@@ -37,6 +37,8 @@ def index():
         password=password,
         host=host,
         database=database
+        raise_on_warnings=True,
+        debug=True
     )
 
     cursor = cnx.cursor()
